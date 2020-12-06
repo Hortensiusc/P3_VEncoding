@@ -30,6 +30,7 @@ subprocess.call(bit_rate, shell=True)
 subtitles = 'ffmpeg -i BBB1Min.mp4 -vf subtitles=subtitles.srt BBB_Subtitles.mp4'
 subprocess.call(subtitles, shell=True)
 
+# Remove the audio from the original video
 audio_fuera = 'ffmpeg -i BBB_Subtitles.mp4 -c copy -an no_audio_final.mp4'
 subprocess.call(audio_fuera, shell=True)
 
