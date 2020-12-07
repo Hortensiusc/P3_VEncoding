@@ -37,3 +37,15 @@ subprocess.call(audio_fuera, shell=True)
 # All together
 final = 'ffmpeg -i no_audio_final.mp4 -i audio_BBB_final.mp3 -c:v mpeg4 -c:a mp3 output.mp4'
 subprocess.call(final, shell=True)
+
+# Remove the auxiliar files created
+cmd = 'rm audio_BBB.mp3'
+subprocess.call(cmd, shell=True)
+cmd = 'rm audio_BBB_mono.mp3'
+subprocess.call(cmd, shell=True)
+cmd = 'rm audio_BBB_final.mp3'
+subprocess.call(cmd, shell=True)
+cmd = 'rm BBB_Subtitles.mp4'
+subprocess.call(cmd, shell=True)
+cmd = 'rm no_audio_final.mp4'
+subprocess.call(cmd, shell=True)
