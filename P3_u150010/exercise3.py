@@ -50,4 +50,7 @@ audio_codec =  str(audio_codecc[11:long-2])
 # Find which ones suits
 broadcasting(video_codec, audio_codec)
 
-
+cmd = 'rm infovideo.txt'
+subprocess.call(cmd, shell=True)
+cmd = 'rm infoaudio.txt'
+subprocess.call(cmd, shell=True)
